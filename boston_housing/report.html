@@ -13839,6 +13839,13 @@ M+sa35wyMzMzMzMzM7Ou8c0pMzMzMzMzMzPrmv8BZUH8aBedqCsAAAAASUVORK5CYII=
 <p><strong>Answer: </strong></p>
 <p>I'd like to choose the graph with maximum depth of 1.</p>
 <p>From the graph, we can see that both training and testing scores are not quite good even more training points are added, and there's no obvious gap between training and testing scores. So I think this model is biased, it's too simple to represent the underlying relationship, so having more training points won't make the model better.</p>
+<p>Revisioned after Review #1:</p>
+<p>From the graph with maximum depth of 1, we can see:</p>
+<ol>
+<li>When the training set is small, the trained model can memorize all training data. As the training set gets larger, the trained model cannot fit all training data properly.</li>
+<li>The opposite things happened for testing score. With a small training set, the testing score is pretty bad, seems the model has not seen similar data before. As the training set gets larger, it becomes it's likely the model has seen some similar data before.</li>
+<li>Testing score increases with larger training set, however, in the later stage, seems the testing score has reached a plateau, adding more training points does not change the testing score significantly.</li>
+</ol>
 
 </div>
 </div>
